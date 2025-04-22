@@ -1,5 +1,4 @@
 package tree;
-
 class tNode {
 
     int data;
