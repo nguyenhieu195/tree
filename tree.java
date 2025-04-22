@@ -4,10 +4,6 @@
  */
 package tree;
 
-/**
- *
- * @author hieuvannguyen
- */
 class tNode {
 
     int data;
