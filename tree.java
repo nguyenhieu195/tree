@@ -111,7 +111,14 @@ public class tree {
 
         return t.data + tongnodetrong(t.left) + tongnodetrong(t.right);
     }
-
+///
+////
+////
+/////
+//////
+/////////
+///////
+////
     int TongNodeTrong() {
         return tongnodetrong(root);
     }
