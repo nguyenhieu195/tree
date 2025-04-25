@@ -15,17 +15,13 @@ class tNode {
         right = rr;
     }
 }
-
 public class tree {
-
     tNode root;
-
     void taoCayT() {
         tNode A = new tNode(7, new tNode(1), new tNode(6));
         tNode B = new tNode(5, null, new tNode(9));
         root = new tNode(2, A, B);
     }
-
     void duyet1(tNode T) {
         if (T != null) {
             System.out.println(" " + T.data);
@@ -33,7 +29,6 @@ public class tree {
             duyet1(T.right);
         }
     }
-
     void duyet2(tNode T) {
         if (T != null) {
             duyet2(T.left);
@@ -41,7 +36,6 @@ public class tree {
             duyet2(T.right);
         }
     }
-
     void duyet3(tNode T) {
         if (T != null) {
             duyet3(T.left);
@@ -49,19 +43,15 @@ public class tree {
             System.out.println(" " + T.data);
         }
     }
-
     void duyetTienTu() { // Duyệt tiền tự: gốc -> con trái -> con phải
         duyet1(root);
     }
-
     void duyetTrungTu() { // Duyệt trung tự: con trái -> gốc -> con phải
         duyet2(root);
     }
-
     void duyetHauTu() { // Duyệt trung tự: con trái -> con phải -> gốc
         duyet3(root);
     }
-
     int dem(tNode t) {
         if (t == null) {
             return 0;
@@ -69,11 +59,9 @@ public class tree {
             return 1 + dem(t.left) + dem(t.right);
         }
     }
-
     int DemNode() {
         return dem(root);
     }
-
     int sum(tNode t) {
         if (t == null) {
             return 0;
@@ -81,11 +69,9 @@ public class tree {
             return t.data + sum(t.left) + sum(t.right);
         }
     }
-
     int SumNode() {
         return sum(root);
     }
-
     int demsola(tNode t) {
         if (t == null) {
             return 0;
@@ -97,11 +83,9 @@ public class tree {
             }
         }
     }
-
     int SoLa() {
         return demsola(root);
     }
-
     int tongnodetrong(tNode t) {
         if (t == null) {
             return 0;
