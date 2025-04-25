@@ -15,6 +15,7 @@ class tNode {
         right = rr;
     }
 }
+
 public class tree {
     tNode root;
     void taoCayT() {
@@ -22,6 +23,7 @@ public class tree {
         tNode B = new tNode(5, null, new tNode(9));
         root = new tNode(2, A, B);
     }
+    
     void duyet1(tNode T) {
         if (T != null) {
             System.out.println(" " + T.data);
@@ -29,6 +31,7 @@ public class tree {
             duyet1(T.right);
         }
     }
+    
     void duyet2(tNode T) {
         if (T != null) {
             duyet2(T.left);
@@ -36,6 +39,7 @@ public class tree {
             duyet2(T.right);
         }
     }
+    
     void duyet3(tNode T) {
         if (T != null) {
             duyet3(T.left);
@@ -43,12 +47,15 @@ public class tree {
             System.out.println(" " + T.data);
         }
     }
+    
     void duyetTienTu() { // Duyệt tiền tự: gốc -> con trái -> con phải
         duyet1(root);
     }
+
     void duyetTrungTu() { // Duyệt trung tự: con trái -> gốc -> con phải
         duyet2(root);
     }
+    
     void duyetHauTu() { // Duyệt trung tự: con trái -> con phải -> gốc
         duyet3(root);
     }
@@ -136,33 +143,43 @@ public class tree {
 
         return 1 + dem_so_node_co_1_con(t.left) + dem_so_node_co_1_con(t.right);
     }
+    
     int DemSoNodeCo1Con() {
         return dem_so_node_co_1_con(root);
     }
+    
     int tinh_chieu_cao(tNode t) {
         if (t == null) {
             return 0;
         }
+        
         return 1 + Math.max(tinh_chieu_cao(t.left), tinh_chieu_cao(t.right));
     }
+    
     int TinhChieuCao() {
         return tinh_chieu_cao(root);
     }
+    
     boolean timX(tNode t, int x){
         if(t == null) {
             return false;
         }
+        
         if(t.data == x){
             return true;
         }
+        
         if(timX(t.left, x) == false){
             return timX(t.right, x);
         }
+        
         return true;
     }
+
     boolean TimX(int x){
         return timX(root, x);
     }
+    
     public static void main(String[] args) {
         tree t = new tree();
         System.out.println("Tạo cây: ");
