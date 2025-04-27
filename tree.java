@@ -1,13 +1,12 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package tree;
 
+<<<<<<< HEAD
 import static java.lang.Integer.max;
 import static java.lang.Math.abs;
 import java.util.Scanner;
 
+=======
+>>>>>>> 3dd19e0a70faed22a08056e14196d12e73ed6cd4
 class tNode {
 
     int data;
@@ -26,39 +25,52 @@ class tNode {
 }
 
 public class tree {
-
     tNode root;
-
     void taoCayT() {
         tNode A = new tNode(7, new tNode(11), new tNode(6));
         tNode B = new tNode(5, null, new tNode(17));
         root = new tNode(2, A, B);
     }
+<<<<<<< HEAD
 
     void duyet_tien_tu(tNode T) {
+=======
+    
+    void duyet1(tNode T) {
+>>>>>>> 3dd19e0a70faed22a08056e14196d12e73ed6cd4
         if (T != null) {
             System.out.println(" " + T.data);
             duyet_tien_tu(T.left);
             duyet_tien_tu(T.right);
         }
     }
+<<<<<<< HEAD
 
     void duyet_trung_tu(tNode T) {
+=======
+    
+    void duyet2(tNode T) {
+>>>>>>> 3dd19e0a70faed22a08056e14196d12e73ed6cd4
         if (T != null) {
             duyet_trung_tu(T.left);
             System.out.println(" " + T.data);
             duyet_trung_tu(T.right);
         }
     }
+<<<<<<< HEAD
 
     void duyet_hau_tu(tNode T) {
+=======
+    
+    void duyet3(tNode T) {
+>>>>>>> 3dd19e0a70faed22a08056e14196d12e73ed6cd4
         if (T != null) {
             duyet_hau_tu(T.left);
             duyet_hau_tu(T.right);
             System.out.println(" " + T.data);
         }
     }
-
+    
     void duyetTienTu() { // Duyệt tiền tự: gốc -> con trái -> con phải
         duyet_tien_tu(root);
     }
@@ -66,7 +78,7 @@ public class tree {
     void duyetTrungTu() { // Duyệt trung tự: con trái -> gốc -> con phải
         duyet_trung_tu(root);
     }
-
+    
     void duyetHauTu() { // Duyệt trung tự: con trái -> con phải -> gốc
         duyet_hau_tu(root);
     }
@@ -154,18 +166,19 @@ public class tree {
 
         return 1 + dem_so_node_co_1_con(t.left) + dem_so_node_co_1_con(t.right);
     }
-
+    
     int DemSoNodeCo1Con() {
         return dem_so_node_co_1_con(root);
     }
-
+    
     int tinh_chieu_cao(tNode t) {
         if (t == null) {
             return 0;
         }
-
+        
         return 1 + Math.max(tinh_chieu_cao(t.left), tinh_chieu_cao(t.right));
     }
+<<<<<<< HEAD
 
     int ChieuCaoCay() {
         return tinh_chieu_cao(root);
@@ -180,10 +193,30 @@ public class tree {
         }
         if (tim_x(t.left, x) == false) {
             return tim_x(t.right, x);
+=======
+    
+    int TinhChieuCao() {
+        return tinh_chieu_cao(root);
+    }
+    
+    boolean timX(tNode t, int x){
+        if(t == null) {
+            return false;
         }
+        
+        if(t.data == x){
+            return true;
+        }
+        
+        if(timX(t.left, x) == false){
+            return timX(t.right, x);
+>>>>>>> 3dd19e0a70faed22a08056e14196d12e73ed6cd4
+        }
+        
         return true;
     }
 
+<<<<<<< HEAD
     boolean TimX(int x) {
         return tim_x(root, x);
     }
@@ -212,6 +245,12 @@ public class tree {
     int MaxNode(){
         return maxNode(root);
     }
+=======
+    boolean TimX(int x){
+        return timX(root, x);
+    }
+    
+>>>>>>> 3dd19e0a70faed22a08056e14196d12e73ed6cd4
     public static void main(String[] args) {
 
         //        2
@@ -223,6 +262,7 @@ public class tree {
         tree t = new tree();
         System.out.println("Tạo cây: ");
         t.taoCayT();
+<<<<<<< HEAD
 
         System.out.println("Duyệt tiền tự: (gốc -> con trái -> con phải)");
         t.duyetTienTu();
@@ -235,6 +275,15 @@ public class tree {
 
         System.out.println("Đếm số node: " + t.DemNode());
 
+=======
+        System.out.println("Duyệt tiền tự: ");
+        t.duyetTienTu();
+        System.out.println("Duyệt trung tự: ");
+        t.duyetTrungTu();
+        System.out.println("Duyệt hậu tự: ");
+        t.duyetHauTu();
+        System.out.println("Dếm số node: " + t.DemNode());
+>>>>>>> 3dd19e0a70faed22a08056e14196d12e73ed6cd4
         System.out.println("Tổng số node: " + t.SumNode());
 
         System.out.println("Đếm số lá: " + t.SoLa());
