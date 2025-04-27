@@ -4,6 +4,9 @@
  */
 package tree;
 
+import static java.lang.Integer.max;
+import static java.lang.Math.abs;
+import java.util.Scanner;
 
 class tNode {
 
@@ -27,45 +30,45 @@ public class tree {
     tNode root;
 
     void taoCayT() {
-        tNode A = new tNode(7, new tNode(1), new tNode(6));
-        tNode B = new tNode(5, null, new tNode(9));
+        tNode A = new tNode(7, new tNode(11), new tNode(6));
+        tNode B = new tNode(5, null, new tNode(17));
         root = new tNode(2, A, B);
     }
 
-    void duyet1(tNode T) {
+    void duyet_tien_tu(tNode T) {
         if (T != null) {
             System.out.println(" " + T.data);
-            duyet1(T.left);
-            duyet1(T.right);
+            duyet_tien_tu(T.left);
+            duyet_tien_tu(T.right);
         }
     }
 
-    void duyet2(tNode T) {
+    void duyet_trung_tu(tNode T) {
         if (T != null) {
-            duyet2(T.left);
+            duyet_trung_tu(T.left);
             System.out.println(" " + T.data);
-            duyet2(T.right);
+            duyet_trung_tu(T.right);
         }
     }
 
-    void duyet3(tNode T) {
+    void duyet_hau_tu(tNode T) {
         if (T != null) {
-            duyet3(T.left);
-            duyet3(T.right);
+            duyet_hau_tu(T.left);
+            duyet_hau_tu(T.right);
             System.out.println(" " + T.data);
         }
     }
 
     void duyetTienTu() { // Duyệt tiền tự: gốc -> con trái -> con phải
-        duyet1(root);
+        duyet_tien_tu(root);
     }
 
     void duyetTrungTu() { // Duyệt trung tự: con trái -> gốc -> con phải
-        duyet2(root);
+        duyet_trung_tu(root);
     }
 
     void duyetHauTu() { // Duyệt trung tự: con trái -> con phải -> gốc
-        duyet3(root);
+        duyet_hau_tu(root);
     }
 
     int dem(tNode t) {
@@ -108,7 +111,7 @@ public class tree {
         return demsola(root);
     }
 
-    int tongnodetrong(tNode t) {
+    int tongnodetrong(tNode t) { // là node không phải node lá
         if (t == null) {
             return 0;
         }
@@ -164,43 +167,98 @@ public class tree {
         return 1 + Math.max(tinh_chieu_cao(t.left), tinh_chieu_cao(t.right));
     }
 
-    int TinhChieuCao() {
+    int ChieuCaoCay() {
         return tinh_chieu_cao(root);
     }
 
-    boolean timX(tNode t, int x){
-        if(t == null) {
+    boolean tim_x(tNode t, int x) {
+        if (t == null) {
             return false;
         }
-        if(t.data == x){
+        if (t.data == x) {
             return true;
         }
-        if(timX(t.left, x) == false){
-            return timX(t.right, x);
+        if (tim_x(t.left, x) == false) {
+            return tim_x(t.right, x);
         }
         return true;
     }
-    
-    boolean TimX(int x){
-        return timX(root, x);
+
+    boolean TimX(int x) {
+        return tim_x(root, x);
     }
     
+    boolean kiem_tra_can_bang(tNode t){
+        if(t == null){
+            return true;
+        }
+        if(abs(tinh_chieu_cao(t.left) - tinh_chieu_cao(t.right))> 1){
+            return false;
+        }
+        return kiem_tra_can_bang(t.left) && kiem_tra_can_bang(t.right);
+    }
     
+    boolean cayCanBang(){
+        return kiem_tra_can_bang(root);
+    }
+    
+    int maxNode(tNode t){
+        if(t == null){
+            return 0;
+        }
+        return max(t.data, max(maxNode(t.left), maxNode(t.right)));
+    }
+    
+    int MaxNode(){
+        return maxNode(root);
+    }
     public static void main(String[] args) {
+
+        //        2
+        //       / \
+        //      7   5
+        //     / \   \
+        //    1   6   9
+        Scanner sc = new Scanner(System.in);
         tree t = new tree();
         System.out.println("Tạo cây: ");
         t.taoCayT();
 
-        System.out.println("Duyệt tiền tự: ");
+        System.out.println("Duyệt tiền tự: (gốc -> con trái -> con phải)");
         t.duyetTienTu();
 
-        System.out.println("Duyệt trung tự: ");
+        System.out.println("Duyệt trung tự: (con trái -> gốc -> con phải)");
         t.duyetTrungTu();
 
-        System.out.println("Duyệt hậu tự: ");
+        System.out.println("Duyệt hậu tự: (con trái -> con phải -> gốc)");
         t.duyetHauTu();
 
-        System.out.println("Dếm số node: " + t.DemNode());
+        System.out.println("Đếm số node: " + t.DemNode());
+
         System.out.println("Tổng số node: " + t.SumNode());
+
+        System.out.println("Đếm số lá: " + t.SoLa());
+
+        System.out.println("Tổng node trong: " + t.TongNodeTrong());
+
+        System.out.println("Tổng node lẻ: " + t.TongNodeLe());
+
+        System.out.println("Đếm số node có 1 con: " + t.DemSoNodeCo1Con());
+
+        System.out.println("Chiều cao cây: " + t.ChieuCaoCay());
+
+        System.out.println("--Tìm phần tử trong cây--");
+        int x = 2;
+//        if (!t.TimX(x)) {
+//            System.out.println("Phần tử không có trong cây.");
+//        } else {
+//            System.out.println("Phần tử có trong cây.");
+//        }
+        
+        System.out.println("Phần tử " + x + " có trong cây: " + t.TimX(x));
+
+        System.out.println("Cây cân bằng: " + t.cayCanBang());
+        
+        System.out.println("Phần tử lớn nhất trong cây: " + t.MaxNode());
     }
 }
