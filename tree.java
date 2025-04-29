@@ -179,6 +179,15 @@ public class tree {
         
         return 1 + Math.max(tinh_chieu_cao(t.left), tinh_chieu_cao(t.right));
     }
+//
+//
+//
+//
+//
+//
+//
+//
+//
 <<<<<<< HEAD
 
     int ChieuCaoCay() {
