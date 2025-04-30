@@ -153,19 +153,7 @@ public class tree {
         return tongnodele(root);
     }
 
-    int dem_so_node_co_1_con(tNode t) {
-        if (t == null) {
-            return 0;
-        }
-        if (t.left == null && t.right == null) {
-            return 0;
-        }
-        if (t.left != null && t.right != null) {
-            return dem_so_node_co_1_con(t.left) + dem_so_node_co_1_con(t.right);
-        }
-
-        return 1 + dem_so_node_co_1_con(t.left) + dem_so_node_co_1_con(t.right);
-    }
+    
     
     int DemSoNodeCo1Con() {
         return dem_so_node_co_1_con(root);
