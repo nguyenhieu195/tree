@@ -71,15 +71,7 @@ public class tree {
             System.out.println(" " + T.data);
         }
     }
-//
-//
-//
-//
-//
-//
-//
-//
-//
+
     void duyetTienTu() { // Duyệt tiền tự: gốc -> con trái -> con phải
         duyet_tien_tu(root);
     }
