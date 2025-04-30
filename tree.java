@@ -106,7 +106,15 @@ public class tree {
     int SumNode() {
         return sum(root);
     }
-
+//
+//
+//
+//
+//
+//
+//
+//
+//
     int demsola(tNode t) {
         if (t == null) {
             return 0;
