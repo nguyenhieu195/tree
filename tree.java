@@ -35,7 +35,10 @@ public class tree {
 
     void duyet_tien_tu(tNode T) {
 =======
-    
+    //
+//
+//
+//
     void duyet1(tNode T) {
 >>>>>>> 3dd19e0a70faed22a08056e14196d12e73ed6cd4
         if (T != null) {
