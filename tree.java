@@ -8,7 +8,7 @@ import java.util.Scanner;
 =======
 >>>>>>> 3dd19e0a70faed22a08056e14196d12e73ed6cd4
 class tNode {
-
+//
     int data;
     tNode left, right;
 
