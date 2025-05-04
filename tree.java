@@ -45,7 +45,7 @@ public class tree {
         }
     }
 <<<<<<< HEAD
-
+//
     void duyet_trung_tu(tNode T) {
 =======
     
