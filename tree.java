@@ -36,6 +36,13 @@ public class tree {
     }
 
     void duyet_tien_tu(tNode T) {
+<<<<<<< HEAD
+=======
+=======
+
+    void duyet1(tNode T) {
+>>>>>>> 3dd19e0a70faed22a08056e14196d12e73ed6cd4
+>>>>>>> origin/main
         if (T != null) {
             System.out.println(" " + T.data);
             duyet_tien_tu(T.left);
@@ -50,6 +57,11 @@ public class tree {
             duyet_trung_tu(T.right);
         }
     }
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> origin/main
 
     void duyet_hau_tu(tNode T) {
         if (T != null) {
@@ -82,8 +94,7 @@ public class tree {
     int DemNode() {
         return dem(root);
     }
-
-    int sum(tNode t) {
+  int sum(tNode t) {
         if (t == null) {
             return 0;
         } else {
@@ -95,7 +106,7 @@ public class tree {
         return sum(root);
     }
 
-    int demsola(tNode t) {
+      int demsola(tNode t) {
         if (t == null) {
             return 0;
         } else {
@@ -181,6 +192,11 @@ public class tree {
 
         return 1 + Math.max(tinh_chieu_cao(t.left), tinh_chieu_cao(t.right));
     }
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> origin/main
 
     int ChieuCaoCay() {
         return tinh_chieu_cao(root);
