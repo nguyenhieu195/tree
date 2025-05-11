@@ -31,7 +31,7 @@ public class tree {
 
     void taoCayT() {
         tNode A = new tNode(7, new tNode(11), new tNode(6));
-        tNode B = new tNode(5, new tNode(13), new tNode(17));
+        tNode B = new tNode(0, null, null);
         root = new tNode(2, A, B);
     }
 
@@ -263,9 +263,9 @@ public class tree {
 //        System.out.println("Tổng số node: " + t.SumNode());
 //
 //        System.out.println("Đếm số lá: " + t.SoLa());
-        System.out.println("Đếm số node trong: " + t.demNodeTrong());
-        System.out.println("Tổng node trong: " + t.TongNodeTrong());
-
+//        System.out.println("Đếm số node trong: " + t.demNodeTrong());
+//        System.out.println("Tổng node trong: " + t.TongNodeTrong());
+//
 //        System.out.println("Tổng node lẻ: " + t.TongNodeLe());
 //
 //        System.out.println("Đếm số node có 1 con: " + t.DemSoNodeCo1Con());
@@ -282,7 +282,7 @@ public class tree {
 //        
 //        System.out.println("Phần tử " + x + " có trong cây: " + t.TimX(x));
 //
-//        System.out.println("Cây cân bằng: " + t.cayCanBang());
+        System.out.println("Cây cân bằng: " + t.cayCanBang());
 //        
 //        System.out.println("Phần tử lớn nhất trong cây: " + t.MaxNode());
     }
