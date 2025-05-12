@@ -88,6 +88,7 @@ public class tree {
     int DemNode() {
         return dem(root);
     }
+    
   int sum(tNode t) {
         if (t == null) {
             return 0;
