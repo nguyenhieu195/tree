@@ -42,7 +42,6 @@ public class tree {
         duyet_tien_tu(T.right);
     }
 }
-
     void duyet1(tNode T) {
         if (T != null) {
             System.out.println(" " + T.data);
