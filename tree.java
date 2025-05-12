@@ -88,15 +88,14 @@ public class tree {
     int DemNode() {
         return dem(root);
     }
-    
-  int sum(tNode t) {
+
+    int sum(tNode t) {
         if (t == null) {
             return 0;
         } else {
             return t.data + sum(t.left) + sum(t.right);
         }
     }
-
     int SumNode() {
         return sum(root);
     }
