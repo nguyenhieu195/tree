@@ -23,7 +23,8 @@ class tNode {
         left = ll;
         right = rr;
     }
-}git push origin main
+}
+
 public class tree {
 
     tNode root;
