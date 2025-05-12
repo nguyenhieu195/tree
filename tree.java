@@ -57,7 +57,7 @@ public class tree {
             duyet_trung_tu(T.right);
         }
     }
-    
+
     void duyet_hau_tu(tNode T) {
         if (T != null) {
             duyet_hau_tu(T.left);
@@ -65,7 +65,6 @@ public class tree {
             System.out.println(" " + T.data);
         }
     }
-
     void duyetTienTu() { // Duyệt tiền tự: gốc -> con trái -> con phải
         duyet_tien_tu(root);
     }
