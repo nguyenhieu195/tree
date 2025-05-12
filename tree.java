@@ -24,7 +24,6 @@ class tNode {
         right = rr;
     }
 }
-
 public class tree {
 
     tNode root;
