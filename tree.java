@@ -65,7 +65,7 @@ public class tree {
             System.out.println(" " + T.data);
         }
     }
-    
+
     void duyetTienTu() { // Duyệt tiền tự: gốc -> con trái -> con phải
         duyet_tien_tu(root);
     }
@@ -85,7 +85,6 @@ public class tree {
             return 1 + dem(t.left) + dem(t.right);
         }
     }
-
     int DemNode() {
         return dem(root);
     }
