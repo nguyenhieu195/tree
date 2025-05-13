@@ -7,7 +7,6 @@ package tree;
 import static java.lang.Integer.max;
 import static java.lang.Math.abs;
 import java.util.Scanner;
-
 class tNode {
 
     int data;
