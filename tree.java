@@ -22,6 +22,7 @@ class tNode {
         data = x;
         left = ll;
         right = rr;
+
     }
 }
 
