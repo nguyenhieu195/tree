@@ -16,6 +16,7 @@ class tNode {
     tNode(int x) {
         data = x;
         left = right = null;
+
     }
 
     tNode(int x, tNode ll, tNode rr) {
