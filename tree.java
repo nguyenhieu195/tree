@@ -13,14 +13,13 @@ class tNode {
         data = x;
         left = right = null;
     }
-    
+
     tNode(int x, tNode ll, tNode rr) {
         data = x;
         left = ll;
         right = rr;
     }
 }
-
 public class tree {
 
     tNode root;
