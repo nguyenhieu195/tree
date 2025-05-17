@@ -5,7 +5,7 @@ import static java.lang.Math.abs;
 import java.util.Scanner;
 
 class tNode {
-    
+
     int data;
     tNode left, right;
 
@@ -13,7 +13,6 @@ class tNode {
         data = x;
         left = right = null;
     }
-
     tNode(int x, tNode ll, tNode rr) {
         data = x;
         left = ll;
