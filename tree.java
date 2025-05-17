@@ -5,7 +5,6 @@ import static java.lang.Math.abs;
 import java.util.Scanner;
 
 class tNode {
-
     int data;
     tNode left, right;
 
