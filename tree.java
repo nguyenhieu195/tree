@@ -45,6 +45,7 @@ public class tree {
             duyet_tien_tu(T.right);
         }
     }
+    
     void duyet_trung_tu(tNode T) {
         if (T != null) {
             duyet_trung_tu(T.left);
