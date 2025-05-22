@@ -23,7 +23,7 @@ class tNode {
 }
 
 public class tree {
-    
+
     tNode root;
 
     void taoCayT() {
@@ -98,7 +98,7 @@ public class tree {
         return sum(root);
     }
 
-      int demsola(tNode t) {
+    int demsola(tNode t) {
         if (t == null) {
             return 0;
         } else {
