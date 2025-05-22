@@ -125,8 +125,9 @@ public class tree {
         return t.data + tongnodetrong(t.left) + tongnodetrong(t.right);
     }
     
-    
+
     int demNodeTrong(tNode t){
+        
         if(t == null){
             return 0;
         }
