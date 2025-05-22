@@ -23,6 +23,7 @@ class tNode {
 }
 
 public class tree {
+    
     tNode root;
 
     void taoCayT() {
