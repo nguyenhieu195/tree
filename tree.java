@@ -127,7 +127,7 @@ public class tree {
     
 
     int demNodeTrong(tNode t){
-        
+
         if(t == null){
             return 0;
         }
@@ -138,6 +138,7 @@ public class tree {
         }
         return 0;
     }
+    
     int demNodeTrong(){
         return demNodeTrong(root);
     }
