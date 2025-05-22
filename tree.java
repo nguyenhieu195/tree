@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 class tNode {
 
-    
+
     int data;
     tNode left, right;
 
@@ -21,8 +21,8 @@ class tNode {
         right = rr;
     }
 }
-public class tree {
 
+public class tree {
     tNode root;
 
     void taoCayT() {
