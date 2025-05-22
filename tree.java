@@ -113,6 +113,7 @@ public class tree {
     int SoLa() {
         return demsola(root);
     }
+    
     int tongnodetrong(tNode t) { // là node không phải node lá
         if (t == null) {
             return 0;
