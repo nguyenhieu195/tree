@@ -146,7 +146,6 @@ public class tree {
     int TongNodeTrong() {
         return tongnodetrong(root);
     }
-
     int tongnodele(tNode t) {
         if (t == null) {
             return 0;
@@ -157,7 +156,7 @@ public class tree {
 
         return tongnodele(t.left) + tongnodele(t.right);
     }
-    
+
     int TongNodeLe() {
         return tongnodele(root);
     }
