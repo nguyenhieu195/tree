@@ -172,7 +172,6 @@ public class tree {
         if (t.left != null && t.right != null) {
             return dem_so_node_co_1_con(t.left) + dem_so_node_co_1_con(t.right);
         }
-
         return 1 + dem_so_node_co_1_con(t.left) + dem_so_node_co_1_con(t.right);
     }
 
@@ -244,7 +243,7 @@ public class tree {
         //      7   5
         //     / \   \
         //    1   6   9
-        
+
         Scanner sc = new Scanner(System.in);
         tree t = new tree();
         System.out.println("Tạo cây: ");
