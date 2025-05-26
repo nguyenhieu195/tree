@@ -172,6 +172,7 @@ public class tree {
         if (t.left != null && t.right != null) {
             return dem_so_node_co_1_con(t.left) + dem_so_node_co_1_con(t.right);
         }
+        
         return 1 + dem_so_node_co_1_con(t.left) + dem_so_node_co_1_con(t.right);
     }
 
