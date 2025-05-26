@@ -257,7 +257,7 @@ public class tree {
 
         System.out.println("Duyệt hậu tự: (con trái -> con phải -> gốc)");
         t.duyetHauTu();
-        
+
 //        System.out.println("Đếm số node: " + t.DemNode());
 //
 //        System.out.println("Tổng số node: " + t.SumNode());
@@ -282,7 +282,7 @@ public class tree {
 //        
 //        System.out.println("Phần tử " + x + " có trong cây: " + t.TimX(x));
 //
-        System.out.println("Cây cân bằng: " + t.cayCanBang());
+//        System.out.println("Cây cân bằng: " + t.cayCanBang());
 //        
 //        System.out.println("Phần tử lớn nhất trong cây: " + t.MaxNode());
     }
