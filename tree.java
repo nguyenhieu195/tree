@@ -257,7 +257,6 @@ public class tree {
 
         System.out.println("Duyệt hậu tự: (con trái -> con phải -> gốc)");
         t.duyetHauTu();
-
 //        System.out.println("Đếm số node: " + t.DemNode());
 //
 //        System.out.println("Tổng số node: " + t.SumNode());
