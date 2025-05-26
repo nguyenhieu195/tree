@@ -244,6 +244,7 @@ public class tree {
         //      7   5
         //     / \   \
         //    1   6   9
+        
         Scanner sc = new Scanner(System.in);
         tree t = new tree();
         System.out.println("Tạo cây: ");
